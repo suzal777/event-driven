@@ -37,7 +37,7 @@ resource "aws_lambda_function" "handle_response" {
   environment {
     variables = {
       TABLE_NAME   = aws_dynamodb_table.attendance.name
-      EMAIL_DOMAIN = "@gmail.com"
+      EMAIL_DOMAIN = "sujalphaiju777@gmail.com"
       EMAIL_SENDER = "sujalphaiju@lftechnology.com"
     }
   }

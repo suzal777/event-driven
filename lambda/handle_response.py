@@ -61,7 +61,7 @@ def lambda_handler(event, context):
 
     ses.send_email(
         Source=os.environ["EMAIL_SENDER"],
-        Destination={"ToAddresses": [f"{user}@{os.environ['EMAIL_DOMAIN']}"]},
+        Destination={"ToAddresses": [os.environ["EMAIL_DOMAIN"]]},
         Message={
             "Subject": {"Data": subject},
             "Body": {"Text": {"Data": body_text}}
